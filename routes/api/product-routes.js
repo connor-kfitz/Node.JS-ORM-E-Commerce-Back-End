@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
         model: Tag,
         attributes: ['tag_name']
       }
-    ]
+    ],
   })
   .then((productData) => {
     res.json(productData);
@@ -39,7 +39,8 @@ router.get('/', (req, res) => {
         attributes: ['tag_name']
       }
     ],
-    }).then((productData) => {
+    })
+    .then((productData) => {
       res.json(productData);
     })
   });
