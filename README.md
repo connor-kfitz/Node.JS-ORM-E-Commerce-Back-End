@@ -12,7 +12,7 @@ In order to accomplish this, models and routes will need to be updated with the 
 
 ## Steps Taken
 
-1.  Created database models for the category, product tag, and tag's items.
+1.  Created database models for the category, product, product tag, and tag's tables.
 
 2.  Created association methods in models/index.js to establish relationships between tables, according to specifications
 
