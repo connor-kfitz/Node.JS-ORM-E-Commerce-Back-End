@@ -3,6 +3,7 @@ const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
+// GET Category
 router.get('/', (req, res) => {
   Category.findAll({
     include: {
@@ -15,12 +16,14 @@ router.get('/', (req, res) => {
   })
 });
 
+// GET Category by ID
 router.get('/:id', (req, res) => {
   Category.findByPk(req.params.id).then((categoryData) => {
     res.json(categoryData);
   })
 });
 
+// POST Category
 router.post('/', (req, res) => {
   Category.create(req.body)
     .then((newCategory) => {
@@ -31,6 +34,7 @@ router.post('/', (req, res) => {
     });
 });
 
+// PUT Category
 router.put('/:id', (req, res) => {
   Category.update(
     {
@@ -50,6 +54,7 @@ router.put('/:id', (req, res) => {
     })
 });
 
+// DELETE Category
 router.delete('/:id', (req, res) => {
   Category.destroy({
     where: {
